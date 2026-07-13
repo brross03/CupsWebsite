@@ -83,6 +83,7 @@ nav a:hover {
 .content-section {
     padding: 4rem 5%;
     text-align: center;
+    scroll-margin-top: 80px;
 }
 
 .content-section h2 {
