@@ -192,16 +192,17 @@ footer {
 }
 
 .menu-swipe-track img {
-    /* This makes each image take up 85% of the screen. 
-       Showing 85% leaves a tiny sliver of the next slide visible, 
-       which subconsciously tells the user "swipe me!" */
+    /* These three lines are the fix for the scaling issue: */
     flex: 0 0 85%; 
-    max-width: 600px; /* Prevents it from getting too huge on desktop */
-    scroll-snap-align: center; /* Snaps the image to the center of the screen */
+    height: auto; 
+    object-fit: contain; 
+    
+    max-width: 600px; 
+    scroll-snap-align: center; 
     
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    border: 3px solid #008000; /* Sinclair Green border */
+    border: 3px solid #008000; 
 }
 
 /* Optional: Hides the ugly horizontal scrollbar for a cleaner "app" look */
